@@ -1,0 +1,7 @@
+Esta la clase Nodo que es la que debemos usar como modelo, hagámosle con nombre y cedula.
+Adicional, están los demás archivos para que puedan irle viendo como base, ya que recuerden que como dijo el ing es muy parecido a listas simples; para diferenciar cual sería el archivo a presentar, pónganle el siguiente nombre:
+				
+			Interfaz: IOPERACION_COLASYPILAS_GRUPO#.h
+			Controlador de la interfaz: OPERACION_COLASYPILAS_GRUPO#.cpp
+
+Les adjunto también el de dobles.
