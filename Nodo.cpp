@@ -3,18 +3,16 @@
 using namespace std;
 
 
-Nodo::Nodo(string cedula, string nombre, Nodo* siguiente, Nodo* anterior){
+Nodo::Nodo(string cedula, string nombre, Nodo* siguiente){
     this->cedula=cedula;
     this->nombre=nombre;
     this->siguiente=siguiente;
-    this->anterior=anterior;
 }
 
 Nodo::Nodo(){
     this->cedula="";
     this->nombre="";
     this->siguiente=nullptr;
-    this->anterior=nullptr;
 }
 
 void Nodo::setCedula(string cedula){
@@ -29,10 +27,6 @@ void Nodo::setSiguiente(Nodo* siguiente){
     this->siguiente=siguiente;
 }
 
-void Nodo::setAnterior(Nodo* anterior){
-    this->anterior=anterior;
-}
-
 string Nodo::getCedula(){
     return this->cedula;
 }
@@ -43,8 +37,4 @@ string Nodo::getNombre(){
 
 Nodo* Nodo::getSiguiente(){
     return this->siguiente;
-}
-
-Nodo* Nodo::getAnterior(){
-    return this->anterior;
 }
