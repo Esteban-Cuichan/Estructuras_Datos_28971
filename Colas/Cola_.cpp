@@ -29,4 +29,7 @@ bool Cola::buscar_G2(const std::string& cedulaBuscar) {
 
     return loEncontre;
 }
+void Cola::imprimir() const {
+    
+}
 
