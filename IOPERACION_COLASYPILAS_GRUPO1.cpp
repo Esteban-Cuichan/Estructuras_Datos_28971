@@ -4,36 +4,19 @@
 
 using namespace std;
 
-void push(Nodo*& pila, string nombre, string cedula) {
-    Nodo* nuevo = new Nodo();
-    nuevo->nombre = nombre;
-    nuevo->cedula = cedula;
-    nuevo->siguiente = pila;
-    pila = nuevo;
+void IOPERACION_COLASYPILAS_GRUPO1::insertarPila(Nodo*& cabeza, string cedula, string nombre) {
+    Nodo* nuevo = new Nodo(cedula, nombre, NULL, NULL);
+
+    if (cabeza == NULL) {
+        cabeza = nuevo;
+    } else {
+        nuevo->setSiguiente(cabeza); 
+        cabeza->setAnterior(nuevo);  
+        cabeza = nuevo;              
+    }
 }
-
-void ingresarDatos(Nodo*& pila) {
-    string nombre, cedula;
-    char op;
-
-    do {
-        cout << "Ingrese nombre: ";
-        cin >> nombre;
-        cout << "Ingrese cedula: ";
-        cin >> cedula;
-
-        push(pila, nombre, cedula);
-
-        cout << "Desea ingresar otro? (s/n): ";
-        cin >> op;
-    } while (op == 's' || op == 'S');
-} 
 void IOPERACION_COLASYPILAS_GRUPO1::insertarCola(Nodo*& cabeza, Nodo*& cola, string cedula, string nombre) {
-    Nodo* nuevo = new Nodo();
-    nuevo->setCedula(cedula);
-    nuevo->setNombre(nombre);
-    nuevo->setSiguiente(NULL);
-    nuevo->setAnterior(NULL);
+    Nodo* nuevo = new Nodo(cedula, nombre, NULL, NULL);
     if (cabeza == NULL) {
         cabeza = nuevo;
         cola = nuevo;
