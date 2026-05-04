@@ -27,4 +27,19 @@ void ingresarDatos(Nodo*& pila) {
         cout << "Desea ingresar otro? (s/n): ";
         cin >> op;
     } while (op == 's' || op == 'S');
+} 
+void Operacion_ColasYPilas::insertarCola(Nodo*& cabeza, Nodo*& cola, string cedula, string nombre) {
+    Nodo* nuevo = new Nodo();
+    nuevo->setCedula(cedula);
+    nuevo->setNombre(nombre);
+    nuevo->setSiguiente(NULL);
+    nuevo->setAnterior(NULL);
+    if (cabeza == NULL) {
+        cabeza = nuevo;
+        cola = nuevo;
+    } else {
+        cola->setSiguiente(nuevo);
+        nuevo->setAnterior(cola);
+        cola = nuevo;
+    }
 }
