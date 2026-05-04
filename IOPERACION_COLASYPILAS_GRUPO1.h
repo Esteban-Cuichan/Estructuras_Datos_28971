@@ -3,7 +3,6 @@
 
 #include "Nodo.h"
 
-void push(Nodo*& pila, string nombre, string cedula);
-void ingresarDatos(Nodo*& pila);
 
+void insertarPila(Nodo*& cabeza, string cedula, string nombre);
 #endif
