@@ -6,7 +6,6 @@ using namespace std;
 
 void IOPERACION_COLASYPILAS_GRUPO1::insertarPila(Nodo*& cabeza, string cedula, string nombre) {
     Nodo* nuevo = new Nodo(cedula, nombre, NULL, NULL);
-
     if (cabeza == NULL) {
         cabeza = nuevo;
     } else {
@@ -15,14 +14,16 @@ void IOPERACION_COLASYPILAS_GRUPO1::insertarPila(Nodo*& cabeza, string cedula, s
         cabeza = nuevo;              
     }
 }
-void IOPERACION_COLASYPILAS_GRUPO1::insertarCola(Nodo*& cabeza, Nodo*& cola, string cedula, string nombre) {
-    Nodo* nuevo = new Nodo(cedula, nombre, NULL, NULL);
-    if (cabeza == NULL) {
+void IOPERACION_COLASYPILAS_GRUPO1::insertarCola(Nodo*& cabeza, string cedula, string nombre) {
+    Nodo* nuevo = new Nodo(cedula, nombre, nullptr, nullptr);
+    if (cabeza == nullptr) {
         cabeza = nuevo;
-        cola = nuevo;
     } else {
-        cola->setSiguiente(nuevo);
-        nuevo->setAnterior(cola);
-        cola = nuevo;
+        Nodo* aux = cabeza;
+        while (aux->getSiguiente() != nullptr) {
+            aux = aux->getSiguiente();
+        }
+        aux->setSiguiente(nuevo);
+        nuevo->setAnterior(aux);
     }
 }
