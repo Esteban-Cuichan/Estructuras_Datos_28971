@@ -28,7 +28,7 @@ void ingresarDatos(Nodo*& pila) {
         cin >> op;
     } while (op == 's' || op == 'S');
 } 
-void Operacion_ColasYPilas::insertarCola(Nodo*& cabeza, Nodo*& cola, string cedula, string nombre) {
+void IOPERACION_COLASYPILAS_GRUPO1::insertarCola(Nodo*& cabeza, Nodo*& cola, string cedula, string nombre) {
     Nodo* nuevo = new Nodo();
     nuevo->setCedula(cedula);
     nuevo->setNombre(nombre);
